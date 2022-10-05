@@ -13,6 +13,7 @@ export interface PeriodicElement {
 
 const LIST_MASCOTAS: Mascota[] = [
   { nombre: 'Ciro', edad: 3, raza: 'Golden', color: 'Dorado', peso: 13 },
+  { nombre: 'Optopus', edad: 4, raza: 'Silver', color: 'Plata', peso: 25 }
 ];
 
 @Component({
@@ -22,7 +23,7 @@ const LIST_MASCOTAS: Mascota[] = [
 })
 export class ListadoMascotaComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['nombre', 'edad', 'raza', 'color', 'peso'];
+  displayedColumns: string[] = ['nombre', 'edad', 'raza', 'color', 'peso', 'acciones'];
   dataSource = new MatTableDataSource<Mascota>(LIST_MASCOTAS);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator //! --> No es nulo
