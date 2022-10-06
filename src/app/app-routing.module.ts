@@ -7,9 +7,8 @@ import { VerMascotaComponent } from './components/ver-mascota/ver-mascota.compon
 const routes: Routes = [
   { path: '', redirectTo: 'listMascotas', pathMatch: 'full' },
   { path: 'listMascotas', component: ListadoMascotaComponent },
-  { path: 'agregarMascotas', component: AgregarEditarMascotaComponent },
+  { path: 'agregarMascota', component: AgregarEditarMascotaComponent },
   { path: 'verMascota/:id', component: VerMascotaComponent },
-  { path: 'editarMascota/:id', component: AgregarEditarMascotaComponent },
   { path: 'editarMascota/:id', component: AgregarEditarMascotaComponent },
   { path: '**', redirectTo: 'listMascotas', pathMatch: 'full' }
 ];
