@@ -2,8 +2,9 @@
     <h1>Listado de Mascotas</h1>
 </div>
 
-<div class="container">
+<app-spinner *ngIf="loading"></app-spinner>
 
+<div class="container">
     <mat-form-field appearance="standard">
         <mat-label>Filtro</mat-label>
         <input matInput placeholder="Buscar" (keyup)="applyFilter($event)" #input autocomplete="off" >
@@ -45,7 +46,7 @@
         <td mat-cell *matCellDef="let element"> 
             <mat-icon [routerLink]="['/verMascota/2']" class="search" fontIcon="search" matTooltip="Ver" ></mat-icon>
             <mat-icon [routerLink]="['/editarMascota/2']" class="edit" fontIcon="edit" matTooltip="Editar"></mat-icon>
-            <mat-icon class="delete" fontIcon="delete" matTooltip="Eliminar"></mat-icon>
+            <mat-icon (click)="eliminarMascota()" class="delete" fontIcon="delete" matTooltip="Eliminar"></mat-icon>
         </td>
       </ng-container>
   
